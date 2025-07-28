@@ -18,7 +18,7 @@ document.querySelector('#app').innerHTML = `
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="hero-content">
-        <h1>Welcome to <span class="brand-highlight">YourBrand</span></h1>
+        <h1>Welcome to <span class="brand-highlight">Hope</span></h1>
         <p class="hero-description">
           A modern and elegant starter template with a clean design using black,<br>
           gold, and silver gray colors.
