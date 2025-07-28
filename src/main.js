@@ -5,7 +5,7 @@ document.querySelector('#app').innerHTML = `
     <!-- Navigation -->
     <nav class="navbar">
       <div class="nav-container">
-        <div class="brand">YourBrand</div>
+        <div class="brand">Hope</div>
         <ul class="nav-menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -15,6 +15,7 @@ document.querySelector('#app').innerHTML = `
       </div>
     </nav>
 
+    /*the welcome section below navigation bars tab*/
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="hero-content">
@@ -87,7 +88,7 @@ document.querySelector('#app').innerHTML = `
         <div class="footer-content">
           <div class="footer-section">
             <div class="footer-brand">
-              <h3>YourBrand</h3>
+              <h3>Hope</h3>
               <p>A modern starter template with a clean design using black, gold, and silver gray colors.</p>
             </div>
           </div>
@@ -116,14 +117,14 @@ document.querySelector('#app').innerHTML = `
             <div class="contact-info">
               <p>123 Main Street</p>
               <p>Anytown, USA 12345</p>
-              <p><a href="mailto:info@yourbrand.com">info@yourbrand.com</a></p>
+              <p><a href="mailto:info@yourbrand.com">info@yHope.com</a></p>
               <p><a href="tel:+1234567890">(123) 456-7890</a></p>
             </div>
           </div>
         </div>
         
         <div class="footer-bottom">
-          <p>&copy; 2025 YourBrand. All rights reserved.</p>
+          <p>&copy; 2025 Hope. All rights reserved.</p>
         </div>
       </div>
     </footer>
