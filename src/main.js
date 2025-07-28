@@ -38,7 +38,7 @@ document.querySelector('#app').innerHTML = `
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-header">
-              <div class="feature-line"></div>
+              <div class= ></div>
               <h3>Responsive Design</h3>
             </div>
             <p>Fully responsive layout that looks great on all devices from mobile to desktop.</p>
@@ -65,18 +65,24 @@ document.querySelector('#app').innerHTML = `
     <section class="services" id="services">
       <div class="container">
         <h2>Our Services</h2>
+        <p class="section-description">
+          We offer a range of digital solutions to help your business grow and succeed.
+        </p>
         <div class="services-grid">
           <div class="service-item">
+            <div class="service-icon">💻</div>
             <h3>Web Development</h3>
-            <p>Custom web applications built with modern technologies</p>
+            <p>Custom web applications built with modern technologies.</p>
           </div>
           <div class="service-item">
+            <div class="service-icon">🎨</div>
             <h3>UI/UX Design</h3>
-            <p>Beautiful and intuitive user interfaces that engage users</p>
+            <p>Beautiful and intuitive user interfaces that engage users.</p>
           </div>
           <div class="service-item">
+            <div class="service-icon">💡</div>
             <h3>Consulting</h3>
-            <p>Strategic guidance for your digital transformation journey</p>
+            <p>Strategic guidance for your digital transformation journey.</p>
           </div>
         </div>
       </div>
