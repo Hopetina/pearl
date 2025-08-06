@@ -55,7 +55,7 @@ document.querySelector('#app').innerHTML = `
               <div class="feature-line"></div>
               <h3>Easy Customization</h3>
             </div>
-            <p>Simple to customize with Tailwind utility classes and component-based architecture.</p>
+            <p>Simple to customize with Tailwind utility classes and component-based architectures.</p>
           </div>
         </div>
       </div>
