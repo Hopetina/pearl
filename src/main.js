@@ -12,10 +12,14 @@ document.querySelector('#app').innerHTML = `
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </nav>
 
-    /*the welcome section below navigation bars tab*/
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="hero-content">
@@ -25,9 +29,12 @@ document.querySelector('#app').innerHTML = `
           gold, and silver gray colors.
         </p>
         <div class="hero-buttons">
-          <button class="btn btn-primary" id="counter">Get Started</button>
-          <button class="btn btn-secondary">Learn More</button>
+          <button class="btn btn-primary" id="get-started-btn">Get Started</button>
+          <button class="btn btn-secondary" id="learn-more-btn">Learn More</button>
         </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
       </div>
     </section>
 
@@ -38,24 +45,24 @@ document.querySelector('#app').innerHTML = `
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-header">
-              <div class= ></div>
+              <div class="feature-icon">📱</div>
               <h3>Responsive Design</h3>
             </div>
             <p>Fully responsive layout that looks great on all devices from mobile to desktop.</p>
           </div>
           <div class="feature-card">
             <div class="feature-header">
-              <div class="feature-line"></div>
+              <div class="feature-icon">⚡</div>
               <h3>Modern Stack</h3>
             </div>
-            <p>Built with React, TypeScript, and Tailwind CSS for a modern development experience.</p>
+            <p>Built with modern web technologies and optimized for performance and user experience.</p>
           </div>
           <div class="feature-card">
             <div class="feature-header">
-              <div class="feature-line"></div>
+              <div class="feature-icon">🎨</div>
               <h3>Easy Customization</h3>
             </div>
-            <p>Simple to customize with Tailwind utility classes and component-based architectures.</p>
+            <p>Simple to customize with clean CSS and modular component-based architecture.</p>
           </div>
         </div>
       </div>
@@ -73,23 +80,86 @@ document.querySelector('#app').innerHTML = `
             <div class="service-icon">💻</div>
             <h3>Web Development</h3>
             <p>Custom web applications built with modern technologies.</p>
+            <button class="service-btn">Learn More</button>
           </div>
           <div class="service-item">
             <div class="service-icon">🎨</div>
             <h3>UI/UX Design</h3>
             <p>Beautiful and intuitive user interfaces that engage users.</p>
+            <button class="service-btn">Learn More</button>
           </div>
           <div class="service-item">
             <div class="service-icon">💡</div>
             <h3>Consulting</h3>
             <p>Strategic guidance for your digital transformation journey.</p>
+            <button class="service-btn">Learn More</button>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <h2>Get In Touch</h2>
+        <p class="section-description">
+          Ready to start your project? Let's discuss how we can help bring your vision to life.
+        </p>
+        
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:info@hope.com">info@hope.com</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <h4>Phone</h4>
+                <p><a href="tel:+1234567890">(123) 456-7890</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <h4>Location</h4>
+                <p>123 Main Street<br>Anytown, USA 12345</p>
+              </div>
+            </div>
+          </div>
+          
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading">Sending...</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
     <!-- Footer Section -->
-    <footer class="footer" id="contact">
+    <footer class="footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
@@ -123,7 +193,7 @@ document.querySelector('#app').innerHTML = `
             <div class="contact-info">
               <p>123 Main Street</p>
               <p>Anytown, USA 12345</p>
-              <p><a href="mailto:info@yourbrand.com">info@yHope.com</a></p>
+              <p><a href="mailto:info@hope.com">info@hope.com</a></p>
               <p><a href="tel:+1234567890">(123) 456-7890</a></p>
             </div>
           </div>
@@ -137,46 +207,167 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 
-// Interactive counter for the "Get Started" button
-function setupInteractiveButton(element) {
-  let clickCount = 0
-  const messages = [
-    "Get Started",
-    "Projects: 1",
-    "Projects: 5", 
-    "Projects: 10",
-    "Projects: 25",
-    "Projects: 50+",
-    "Industry Leader",
-    "Get Started" // Reset
-  ]
-  
-  const updateButton = (count) => {
-    clickCount = count
-    element.textContent = messages[count]
-    
-    // Add visual feedback
-    element.style.transform = 'scale(0.95)'
-    setTimeout(() => {
-      element.style.transform = 'scale(1)'
-    }, 100)
-    
-    // Add special styling for higher counts
-    if (count > 4) {
-      element.style.background = 'linear-gradient(135deg, #ffd700, #ffed4e)'
-      element.style.boxShadow = '0 8px 25px rgba(255, 215, 0, 0.3)'
-    } else {
-      element.style.background = ''
-      element.style.boxShadow = ''
-    }
-  }
-  
-  element.addEventListener('click', () => {
-    const nextCount = clickCount >= messages.length - 1 ? 0 : clickCount + 1
-    updateButton(nextCount)
-  })
-  
-  updateButton(0)
+// Smooth scrolling for navigation links
+function setupSmoothScrolling() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
 }
 
-setupInteractiveButton(document.querySelector('#counter'))
+// Mobile menu toggle
+function setupMobileMenu() {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+}
+
+// Hero buttons functionality
+function setupHeroButtons() {
+  const getStartedBtn = document.querySelector('#get-started-btn');
+  const learnMoreBtn = document.querySelector('#learn-more-btn');
+  
+  getStartedBtn.addEventListener('click', () => {
+    document.querySelector('#contact').scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+  
+  learnMoreBtn.addEventListener('click', () => {
+    document.querySelector('#about').scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+}
+
+// Service buttons functionality
+function setupServiceButtons() {
+  document.querySelectorAll('.service-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const serviceTitle = e.target.parentElement.querySelector('h3').textContent;
+      showNotification(`Learn more about ${serviceTitle} - Contact us for details!`);
+      
+      setTimeout(() => {
+        document.querySelector('#contact').scrollIntoView({
+          behavior: 'smooth'
+        });
+      }, 1500);
+    });
+  });
+}
+
+// Contact form functionality
+function setupContactForm() {
+  const form = document.querySelector('#contact-form');
+  const submitBtn = form.querySelector('.submit-btn');
+  
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Show loading state
+    submitBtn.classList.add('loading');
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    // Show success message
+    showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
+    
+    // Reset form
+    form.reset();
+    submitBtn.classList.remove('loading');
+  });
+}
+
+// Notification system
+function showNotification(message, type = 'info') {
+  const notification = document.createElement('div');
+  notification.className = `notification ${type}`;
+  notification.textContent = message;
+  
+  document.body.appendChild(notification);
+  
+  // Trigger animation
+  setTimeout(() => notification.classList.add('show'), 100);
+  
+  // Remove notification
+  setTimeout(() => {
+    notification.classList.remove('show');
+    setTimeout(() => notification.remove(), 300);
+  }, 4000);
+}
+
+// Scroll animations
+function setupScrollAnimations() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+      }
+    });
+  }, observerOptions);
+  
+  // Observe elements for animation
+  document.querySelectorAll('.feature-card, .service-item, .contact-item').forEach(el => {
+    observer.observe(el);
+  });
+}
+
+// Navbar scroll effect
+function setupNavbarScroll() {
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 100) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+}
+
+// Scroll indicator
+function setupScrollIndicator() {
+  const scrollIndicator = document.querySelector('.scroll-indicator');
+  
+  scrollIndicator.addEventListener('click', () => {
+    document.querySelector('#about').scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+  
+  // Hide scroll indicator when scrolling
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      scrollIndicator.style.opacity = '0';
+    } else {
+      scrollIndicator.style.opacity = '1';
+    }
+  });
+}
+
+// Initialize all functionality
+setupSmoothScrolling();
+setupMobileMenu();
+setupHeroButtons();
+setupServiceButtons();
+setupContactForm();
+setupScrollAnimations();
+setupNavbarScroll();
+setupScrollIndicator();
