@@ -302,8 +302,8 @@ document.querySelector('#app').innerHTML = `
             <div class="contact-info">
               <p>123 Main Street</p>
               <p>Musgrave, Durban 4001</p>
-              <p><a href="mailto:info@hope.com">madlalahope.com</a></p>
-              <p><a href="tel:+1234567890">(27) 79 456-7890</a></p>
+              <p><a href="mailto:info@hope.com">madlalahope@gmail.com</a></p>
+              <p><a href="tel:+1234567890">(27) 76 456-7890</a></p>
             </div>
           </div>
         </div>
