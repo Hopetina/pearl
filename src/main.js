@@ -42,18 +42,10 @@ document.querySelector('#app').innerHTML = `
             <div class="btn-particles"></div>
           </button>
         </div>
-        <div class="hero-stats">
-          <div class="stat-item" data-count="150">
-            <span class="stat-number">0</span>
-            <span class="stat-label">Projects</span>
-          </div>
-          <div class="stat-item" data-count="50">
-            <span class="stat-number">0</span>
-            <span class="stat-label">Clients</span>
-          </div>
+        <div class="global-stats">
           <div class="stat-item" data-count="5">
             <span class="stat-number">0</span>
-            <span class="stat-label">Years</span>
+            <span class="stat-label">Years existance</span>
           </div>
         </div>
       </div>
