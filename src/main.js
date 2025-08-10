@@ -301,9 +301,9 @@ document.querySelector('#app').innerHTML = `
             <h4>Contact</h4>
             <div class="contact-info">
               <p>123 Main Street</p>
-              <p>Anytown, USA 12345</p>
-              <p><a href="mailto:info@hope.com">info@hope.com</a></p>
-              <p><a href="tel:+1234567890">(123) 456-7890</a></p>
+              <p>Musgrave, Durban 4001</p>
+              <p><a href="mailto:info@hope.com">madlalahope.com</a></p>
+              <p><a href="tel:+1234567890">(27) 79 456-7890</a></p>
             </div>
           </div>
         </div>
