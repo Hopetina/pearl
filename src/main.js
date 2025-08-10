@@ -212,7 +212,7 @@ document.querySelector('#app').innerHTML = `
               <div class="contact-icon">📧</div>
               <div>
                 <h4>Email</h4>
-                <p><a href="mailto:info@hope.com">info@hope.com</a></p>
+                <p><a href="mailto:info@hope.com">madlalahope@gmail.com</a></p>
               </div>
               <div class="card-glow"></div>
             </div>
@@ -221,7 +221,7 @@ document.querySelector('#app').innerHTML = `
               <div class="contact-icon">📞</div>
               <div>
                 <h4>Phone</h4>
-                <p><a href="tel:+1234567890">(123) 456-7890</a></p>
+                <p><a href="tel:+1234567890">(27) 76 456-7890</a></p>
               </div>
               <div class="card-glow"></div>
             </div>
@@ -230,7 +230,7 @@ document.querySelector('#app').innerHTML = `
               <div class="contact-icon">📍</div>
               <div>
                 <h4>Location</h4>
-                <p>123 Main Street<br>Anytown, USA 12345</p>
+                <p>123 Main Street<br>Musgrave, Durban 4001</p>
               </div>
               <div class="card-glow"></div>
             </div>
@@ -301,9 +301,9 @@ document.querySelector('#app').innerHTML = `
             <h4>Contact</h4>
             <div class="contact-info">
               <p>123 Main Street</p>
-              <p>Anytown, USA 12345</p>
-              <p><a href="mailto:info@hope.com">info@hope.com</a></p>
-              <p><a href="tel:+1234567890">(123) 456-7890</a></p>
+              <p>Musgrave, Durban 4001</p>
+              <p><a href="mailto:info@hope.com">madlalahope@gmail.com</a></p>
+              <p><a href="tel:+1234567890">(27) 76 456-7890</a></p>
             </div>
           </div>
         </div>
